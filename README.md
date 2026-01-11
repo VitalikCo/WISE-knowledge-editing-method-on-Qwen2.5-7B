@@ -1,4 +1,4 @@
-# WISE-knowledge-editing-method-on-Qwen2.5-7B
+# WISE knowledge editing method on Qwen2.5-7B
 
 
 ## Statement of the Problem
