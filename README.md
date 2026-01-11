@@ -1,5 +1,4 @@
 # WISE-knowledge-editing-method-on-Qwen2.5-7B
-Analysis of WISE knowledge editing method stability with a focus on sequential editing stability and query-type-specific performance
 
 
 ## Statement of the Problem
@@ -8,6 +7,18 @@ Analysis of WISE knowledge editing method stability with a focus on sequential e
 - Knowledge editing methods enable targeted modification of specific facts but suffer from limited speed, scalability, and stability under sequential edits.
 - This work addresses the problem of improving speed and quality of knowledge editing, focusing on sequential editing while preserving rewrite accuracy, generalization (rephrase, portability), and locality.
 - Efficient and reliable knowledge editing is crucial for deploying LLMs in dynamic real-world environments where facts change over time.
+
+
+## Purpose and Objectives
+**Research purpose**: Evaluate the effectiveness of the [WISE](https://arxiv.org/abs/2405.14768) knowledge editing method on the ZsRE dataset, analysis of WISE knowledge editing method stability with a focus on sequential editing stability and query-type-specific performance
+
+**Objectives**:
+- Analyze existing knowledge editing methods and their limitations
+- Configure and adapt the WISE knowledge editing algorithm for efficient local model updates on the ZsRE dataset.
+- Design and implement a custom evaluation protocol for measuring knowledge retention under sequential edits.
+- Implement a sequential editing pipeline on a large language model (Qwen2.5-7B).
+- Analyze knowledge retention and degradation under multiple sequential edits.
+- Conduct an analysis of editing behavior and retention across different question types (who, what, when, where, which).
 
 
 ## Research Methods and Tools
@@ -21,6 +32,14 @@ Analysis of WISE knowledge editing method stability with a focus on sequential e
 **Tools**: Python, EasyEdit, HuggingFace Transformers, PyTorch, NumPy, Matplotlib.
 
 **Data**: ZsRE (Zero-Shot Relation Extraction) dataset.
+
+
+## Scientific Novelty
+- A **custom retention evaluation protocol** for sequential knowledge editing is proposed, enabling continual assessment of all previously edited facts after each new edit.
+- The effectiveness of the WISE knowledge editing method is analyzed under **long sequential edit streams**, rather than isolated single edits.
+- A **query-type-specific analysis** of knowledge editing behavior is introduced for the ZsRE benchmark.
+- The interaction between local parameter editing, knowledge retention, and forgetting effects is systematically studied.
+- The proposed evaluation setup **reveals limitations of standard post-edit metrics** and provides deeper insight into long-term editing stability.
 
 
 ## General solution flow
